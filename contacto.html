@@ -16,8 +16,112 @@
         <li><a href="">Ubicaciones</a></li>
         <li><a href="contacto.html">Contacto</a></li>
         <li><a href="trabajaConNosotros.html">Trabaja con nosotros</a></li>
-      </ul>
+      </ul> 
     </nav>
-    <h1>Contacto</h1>
+    
+    <h1>Datos personales</h1>
+
+<div class="contenedor-contacto">
+    <form id="formContacto" action="https://formsubmit.co/luisdiaz9780@gmail.com" method="POST" novalidate>
+
+        <label>Nombre:</label><br>
+        <input type="text" id="nombre" name="Nombre"><br><br>
+
+        <label>Correo:</label><br>
+        <input type="email" id="correo" name="Correo" placeholder="luis123@gmail.com"><br><br>
+
+        <label>Teléfono:</label><br>
+        <input type="text" id="telefono" name="Telefono" placeholder="8888-8888"><br><br>
+
+        <label>Motivo:</label><br>
+        <select id="motivo" name="Motivo">
+            <option value="">Seleccione</option>
+            <option>Consulta</option>
+            <option>Queja</option>
+            <option>Sugerencia</option>
+        </select><br><br>
+
+        <label>Mensaje:</label><br>
+        <textarea id="mensaje" name="Mensaje" style="resize: none;" placeholder="Escriba su mensaje aqui...."></textarea><br><br>
+
+        <input type="checkbox" id="politica" name="Politica" required> //me falta validar y acomodar esto
+        <label for="politica">Acepto la política de privacidad y uso de mis datos personales</label><br><br>
+        
+        <div class="botones-form">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </div>
+
+    </form>
+</div>
+<script>
+document.getElementById("formContacto").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let valido = true;
+
+    let nombre = document.getElementById("nombre");
+    let correo = document.getElementById("correo");
+    let telefono = document.getElementById("telefono");
+    let motivo = document.getElementById("motivo");
+    let mensaje = document.getElementById("mensaje");
+
+
+    document.querySelectorAll("input, select, textarea")
+        .forEach(c => c.classList.remove("error"));
+
+
+    if(nombre.value.trim() === ""){
+        nombre.classList.add("error");
+        nombre.focus();
+        valido = false;
+        return;
+    }
+
+    if(correo.value.trim() === ""){
+        correo.classList.add("error");
+        correo.focus();
+        valido = false;
+        return;
+    }
+
+    let patron = /^[0-9]{8}$/;
+    if(!patron.test(telefono.value)){
+        telefono.classList.add("error");
+        telefono.focus();
+        valido = false;
+        return;
+    }
+
+    if(motivo.value === ""){
+        motivo.classList.add("error");
+        motivo.focus();
+        valido = false;
+        return;
+    }
+
+    if(mensaje.value.trim() === ""){
+        mensaje.classList.add("error");
+        mensaje.focus();
+        valido = false;
+        return;
+    }
+
+    // si todo esta bien, se envia 
+    if(valido){
+        this.submit();
+    }
+});
+</script>
+
+<footer>
+      <p>© 2026 Soda Lizano - Todos los derechos reservados</p>
+      <p>Teléfono: 2222-2222 | Email: contacto@sodalizano.com</p>
+      <p>
+          <a href="https://facebook.com">Facebook</a> | 
+          <a href="https://instagram.com">Instagram</a> | 
+          <a href="https://twitter.com">Twitter</a>
+      </p>
+    </footer>
 </body>
 </html>
