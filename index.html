@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="IMG/LogoVerde.png" alt="Logo" width="100"></a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="">Promociones</a></li>
+        <li><a href="">Ubicaciones</a></li>
+        <li><a href="">Contacto</a></li>
+        <li><a href="">Trabaja con nosotros</a></li>
+      </ul>
+    </nav>
+
+    <br><br><br>
+
+    <div class="slider">
+        <img id="ImgSld1" src="IMG/megapapas.png" alt="MegaPapas" width="600">
+        <button onclick="anterior()">Anterior</button>
+        <button onclick="siguiente()">Siguiente</button>
+    </div>
+
+    <br><br><br>
+
+
+    <div class="imagenes-enlaces">
+        <a href="promociones.html">
+            <img src="IMG/megapapas.png" alt="Promociones" width="300">
+        </a>
+        
+        <a href="menu.html">
+            <img src="IMG/megapapas.png" alt="Menú" width="300">
+        </a>
+        
+        <a href="ubicaciones.html">
+            <img src="IMG/megapapas.png" alt="Ubicaciones" width="300">
+        </a>
+    </div>
+
+    <br><br><br>
+
+    <div class="galeria">
+
+        <a href="menu.html">
+            <img src="IMG/cantones.png" alt="Producto 1" width="250">
+        </a>
+        
+        <a href="menu.html">
+            <img src="IMG/chopsuey.png" alt="Producto 2" width="250">
+        </a>
+        
+        <a href="menu.html">
+            <img src="IMG/patacones.png" alt="Producto 3" width="250">
+        </a>
+        
+        <a href="menu.html">
+            <img src="IMG/megapapas.png" alt="Producto 4" width="250">
+        </a>
+        
+        <br>
+        
+        <a href="menu.html">
+            <img src="IMG/pollo.png" alt="Producto 5" width="250">
+        </a>
+        
+        <a href="menu.html">
+            <img src="IMG/salchipapa.png" alt="Producto 6" width="250">
+        </a>
+        
+        <a href="menu.html">
+            <img src="IMG/salchipapicarne.png" alt="Producto 7" width="250">
+        </a>
+        
+        <a href="menu.html">
+            <img src="IMG/surtido.png" alt="Producto 8" width="250">
+        </a>
+    </div>
+
+    <script>
+        var ImgSld = ["IMG/megapapas.png", "IMG/chopsuey.png", "IMG/pollo.png"];
+        var pos = 0;
+        function siguiente(){
+            pos = pos + 1;
+            if(pos >= ImgSld.length){
+                pos = 0;
+            }
+            document.getElementById("ImgSld1").src = ImgSld[pos];
+        }
+
+        function anterior(){
+            pos = pos - 1;
+            if(pos < 0){
+                pos = ImgSld.length - 1;
+            }
+            document.getElementById("ImgSld1").src = ImgSld[pos];
+        }
+        setInterval(siguiente, 3000);
+    </script>
+  </body>
+  <footer>
+    <p>© 2026 Soda Lizano - Todos los derechos reservados</p>
+    <p>Teléfono: 2222-2222 | Email: contacto@sodalizano.com</p>
+    <p>
+        <a href="https://facebook.com">Facebook</a> | 
+        <a href="https://instagram.com">Instagram</a> | 
+        <a href="https://twitter.com">Twitter</a>
+    </p>
+</footer>
+</html>

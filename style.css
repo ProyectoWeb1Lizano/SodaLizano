@@ -1,0 +1,181 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('fondo.svg');
+    background-repeat: repeat;
+}
+
+
+nav {
+    background-color: #133F22;
+    padding: 0px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #90ee90;
+}
+
+
+body {
+    padding-top: 120px;
+}
+
+
+.slider {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.slider img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    
+}
+
+.slider button {
+    margin: 20px 10px;
+    padding: 10px 20px;
+    background-color: #2d5016;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.slider button:hover {
+    background-color: #3d6020;
+}
+
+.imagenes-enlaces {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.imagenes-enlaces img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.imagenes-enlaces img:hover {
+    transform: scale(1.05);
+}
+
+.galeria {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.galeria img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #2d5016;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #90ee90;
+}
+
+h1 {
+    text-align: center;
+    color: #2d5016;
+    font-size: 48px;
+    margin: 40px 0;
+}
+
+.menu-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tarjeta-menu {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 30px 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-menu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.tarjeta-menu img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.info-plato h2 {
+    color: #2d5016;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.info-plato p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
