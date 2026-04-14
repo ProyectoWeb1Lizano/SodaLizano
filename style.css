@@ -181,7 +181,7 @@ h1 {
 }
 
 .contenedor-contacto {
-    width: 300px;
+    width: 340px;
     margin: auto;
     font-size: 18px;
     font-weight: bold;
@@ -236,4 +236,9 @@ input, select, textarea {
     background-color: #398000;
 }
 
+.check-politica input {
+    width: auto;
+    transform: scale(1.5);
+
+}
 

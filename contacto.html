@@ -19,22 +19,25 @@
       </ul> 
     </nav>
     
-    <h1>Datos personales</h1>
+    <h1>Contáctenos</h1>
 
 <div class="contenedor-contacto">
     <form id="formContacto" action="https://formsubmit.co/luisdiaz9780@gmail.com" method="POST" novalidate>
 
         <label>Nombre:</label><br>
-        <input type="text" id="nombre" name="Nombre"><br><br>
+        <input type="text" id="nombre" name="Nombre" placeholder="Ej: Luis" title="Solo letras, mínimo 2 caracteres"><br><br>
+
+        <label>Apellidos:</label><br>
+        <input type="text" id="apellidos" name="Apellidos" placeholder="Ej: Diaz Mora" title="Solo letras, mínimo 2 caracteres"><br><br>
 
         <label>Correo:</label><br>
-        <input type="email" id="correo" name="Correo" placeholder="luis123@gmail.com"><br><br>
+        <input type="email" id="correo" name="Correo" placeholder="Ej: luis123@gmail.com" title="Debe contener @ y un dominio válido"><br><br>
 
         <label>Teléfono:</label><br>
-        <input type="text" id="telefono" name="Telefono" placeholder="8888-8888"><br><br>
+        <input type="text" id="telefono" name="Telefono" placeholder="12345678" title="Debe tener 8 dígitos numéricos (sin espacios ni guiones)"   ><br><br>
 
         <label>Motivo:</label><br>
-        <select id="motivo" name="Motivo">
+        <select id="motivo" name="Motivo" title="Seleccione un motivo">
             <option value="">Seleccione</option>
             <option>Consulta</option>
             <option>Queja</option>
@@ -42,10 +45,12 @@
         </select><br><br>
 
         <label>Mensaje:</label><br>
-        <textarea id="mensaje" name="Mensaje" style="resize: none;" placeholder="Escriba su mensaje aqui...."></textarea><br><br>
+        <textarea id="mensaje" name="Mensaje" style="resize: none;" placeholder="Escriba su mensaje aqui...." title="No puede estar vacío"></textarea><br><br>
 
-        <input type="checkbox" id="politica" name="Politica" required> //me falta validar y acomodar esto
-        <label for="politica">Acepto la política de privacidad y uso de mis datos personales</label><br><br>
+        <div class="check-politica">
+        <input type="checkbox" id="politica" name="Politica" title="Debe aceptar la política para enviar el formulario">
+         <label for="politica">Acepto la política de privacidad y uso de mis datos personales</label>
+        </div>
         
         <div class="botones-form">
             <input type="submit" value="Enviar">
@@ -61,29 +66,39 @@ document.getElementById("formContacto").addEventListener("submit", function(e){
     let valido = true;
 
     let nombre = document.getElementById("nombre");
+    let apellidos = document.getElementById("apellidos")
     let correo = document.getElementById("correo");
     let telefono = document.getElementById("telefono");
     let motivo = document.getElementById("motivo");
     let mensaje = document.getElementById("mensaje");
+    let politica = document.getElementById("politica");
 
 
     document.querySelectorAll("input, select, textarea")
         .forEach(c => c.classList.remove("error"));
 
 
-    if(nombre.value.trim() === ""){
+   let patronNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s-]{2,}$/;
+    if(!patronNombre.test(nombre.value.trim())){
         nombre.classList.add("error");
         nombre.focus();
-        valido = false;
         return;
     }
 
-    if(correo.value.trim() === ""){
+    if(!patronNombre.test(apellidos.value.trim())){
+        apellidos.classList.add("error");
+        apellidos.focus();
+    return;
+    }
+
+    let patronCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!patronCorreo.test(correo.value.trim())){
         correo.classList.add("error");
         correo.focus();
         valido = false;
         return;
     }
+    
 
     let patron = /^[0-9]{8}$/;
     if(!patron.test(telefono.value)){
@@ -104,6 +119,14 @@ document.getElementById("formContacto").addEventListener("submit", function(e){
         mensaje.classList.add("error");
         mensaje.focus();
         valido = false;
+        return;
+    }
+
+    if(!politica.checked){
+        politica.classList.add("error"); 
+        politica.focus();
+        valido = false;
+        alert("Debe aceptar la política de privacidad");
         return;
     }
 
