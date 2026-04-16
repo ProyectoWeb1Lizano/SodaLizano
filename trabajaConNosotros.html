@@ -1,25 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabaja con nosostros - Soda Lizano</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trabaja con nosotros - Soda Lizano</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-     <nav>
-      <ul>
-        <li><a href="index.html"><img src="IMG/LogoVerde.png" alt="Logo" width="100"></a></li>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="">Promociones</a></li>
-        <li><a href="">Ubicaciones</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="trabajaConNosotros.html">Trabaja con nosotros</a></li>
-      </ul>
-    </nav>
-    <h1>Trabaja con nosotros</h1>
 
-    
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html"><img src="IMG/LogoVerde.png" width="100"></a></li>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="">Promociones</a></li>
+    <li><a href="">Ubicaciones</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="trabajaConNosotros.html">Trabaja con nosotros</a></li>
+  </ul> 
+</nav>
+
+<h1>Trabaja con nosotros</h1>
+
+
+<div class="beneficios-container">
+  <div class="beneficio-tarjeta">
+    <div class="beneficio-icono">👥</div>
+    <h3>Buen ambiente</h3>
+    <p>Equipo unido y comprometido con el servicio al cliente.</p>
+  </div>
+
+  <div class="beneficio-tarjeta">
+    <div class="beneficio-icono">📈</div>
+    <h3>Crecimiento</h3>
+    <p>Oportunidades de desarrollo y ascenso dentro de la empresa.</p>
+  </div>
+
+  <div class="beneficio-tarjeta">
+    <div class="beneficio-icono">💳</div>
+    <h3>Salario competitivo</h3>
+    <p>Remuneración justa acorde a la ley y su experiencia.</p>
+  </div>
+</div>
+
+<div class="contenedor-trabajo">
+<form id="formTrabaja" action="https://formsubmit.co/luisdiaz9780@gmail.com" method="POST" enctype="multipart/form-data" novalidate>
+
+
+<div class="fila-form">
+
+
+  <div class="seccion">
+    <p class="seccion-label">Datos personales</p>
+
+    <label>Nombre:</label>
+    <input type="text" id="nombre" name="Nombre" placeholder="Ej: Luis"><br><br>
+
+    <label>Apellidos:</label>
+    <input type="text" id="apellidos" name="Apellidos" placeholder="Ej: Diaz Mora"><br><br>
+
+    <label>Cédula:</label>
+    <input type="text" id="cedula" name="Cedula" placeholder="0-0000-0000"><br><br>
+
+    <label>Fecha de nacimiento:</label>
+    <input type="date" id="nacimiento" name="Nacimiento"><br><br>
+
+    <label>Correo:</label>
+    <input type="email" id="correo" name="Correo" placeholder="correo@gmail.com"><br><br>
+
+    <label>Teléfono:</label>
+    <input type="text" id="telefono" name="Telefono" placeholder="12345678"><br><br>
+  </div>
+
+
+  <div class="seccion">
+    <p class="seccion-label">Información laboral</p>
+
+    <label>Puesto de interés:</label>
+    <select id="puesto" name="Puesto">
+      <option value="">Seleccione...</option>
+      <option>Mesero / Moza</option>
+      <option>Cocinero</option>
+      <option>Cajero/a</option>
+      <option>Administración</option>
+      <option>Limpieza</option>
+    </select><br><br>
+
+    <label>Disponibilidad:</label>
+    <select id="disponibilidad" name="Disponibilidad">
+      <option value="">Seleccione...</option>
+      <option>Tiempo completo</option>
+      <option>Medio tiempo</option>
+      <option>Fines de semana</option>
+    </select><br><br>
+
+    <label>Experiencia:</label>
+    <textarea id="experiencia" name="Experiencia"  placeholder="Cuéntenos su experiencia..."></textarea><br><br>
+  </div>
+
+</div>
+
+<div class="seccion">
+  <p class="seccion-label">Adjuntos</p>
+
+  <label>Currículum vitae:</label>
+  <input type="file" id="cv" name="CV" accept=".pdf,.doc,.docx"><br><br>
+
+  <div class="check-politica">
+    <input type="checkbox" id="politica">
+    <label for="politica">Acepto el uso de mis datos</label>
+  </div>
+
+  <div class="botones-form">
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpiar">
+  </div>
+</div>
+
+</form>
+</div>
+
+<footer>
+      <p>© 2026 Soda Lizano - Todos los derechos reservados</p>
+      <p>Teléfono: 2222-2222 | Email: contacto@sodalizano.com</p>
+      <p>
+          <a href="https://facebook.com">Facebook</a> | 
+          <a href="https://instagram.com">Instagram</a> | 
+          <a href="https://twitter.com">Twitter</a>
+      </p>
+</footer>
+
+<script src="validacionTrabajo.js"></script>
+
 </body>
 </html>
