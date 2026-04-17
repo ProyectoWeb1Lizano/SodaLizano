@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-image: url("fondo.svg");
+  background-repeat: repeat;
+  margin: 0;
+    overflow-x: hidden; /* seguridad extra */
+}
+
+nav {
+  background-color: #133f22;
+  padding: 0px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #90ee90;
+}
+
+body {
+  padding-top: 120px;
+}
+
+.slider {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.slider img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider button {
+  margin: 20px 10px;
+  padding: 10px 20px;
+  background-color: #2d5016;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.slider button:hover {
+  background-color: #3d6020;
+}
+
+.imagenes-enlaces {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.imagenes-enlaces img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.imagenes-enlaces img:hover {
+  transform: scale(1.05);
+}
+
+.galeria {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.galeria img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #2d5016;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #90ee90;
+}
+
+h1 {
+  text-align: center;
+  color: #2d5016;
+  font-size: 48px;
+  margin: 40px 0;
+}
+
+.menu-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tarjeta-menu {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.tarjeta-menu:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-menu img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info-plato h2 {
+  color: #2d5016;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.info-plato p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/*-----------------------------------------Estilos Juan----------------------------------*/
+/*-----------------------------------------Estilos Juan----------------------------------*/
+/*-----------------------------------------Estilos Juan----------------------------------*/
+
+.section {
+  display: flex;
+  height: 100vh;
+}
+
+
+.aside {
+  width: 50%;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+
+.div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.div img {
+  width: auto;
+  height: auto;
+} 
+
+
+
+/* Contenedor general */
+.contenedor-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas */
+  gap: 20px;
+  padding: 20px;
+
+}
+
+ /* Tarjeta */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+
+ /* Texto */
+.info h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+
+
+.info p {
+  margin: 5px 0;
+  color: #555;
+
+
+} /* Links */
+.links {
+  margin-top: 10px;
+}
+.links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: green;
+  font-size: 14px;
+
+
+} /* Botón */
+.accion button {
+  padding: 10px 20px;
+  border: 2px solid green;
+  background: transparent;
+  border-radius: 20px;
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+
+} /* Efecto hover */
+.accion button:hover {
+  background-color: green;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+}
+/*-----------------------------------------Estilos Juan----------------------------------*/
+/*-----------------------------------------Estilos Juan----------------------------------*/
+/*-----------------------------------------Estilos Juan----------------------------------*/
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #2e5e2e;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #1e3f1e;
+}
