@@ -8,17 +8,21 @@
 </head>
 
 <body>
-
 <nav>
-  <ul>
-    <li><a href="index.html"><img src="IMG/LogoVerde.png" width="100"></a></li>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="promociones.html">Promociones</a></li>
-    <li><a href="locales.html">Ubicaciones</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-    <li><a href="trabajaConNosotros.html">Trabaja con nosotros</a></li>
-  </ul> 
+  <div class="nav-contenedor">
+    <a href="index.html">
+      <img src="IMG/LogoVerde.png" alt="Logo" width="80">
+    </a>
+    <button class="hamburguesa" id="hamburguesa">&#9776;</button>
+    <ul id="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="promociones.html">Promociones</a></li>
+      <li><a href="locales.html">Ubicaciones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="trabajaConNosotros.html">Trabaja con nosotros</a></li>
+    </ul>
+  </div>
 </nav>
 
 <h1>Trabaja con nosotros</h1>
@@ -55,10 +59,10 @@
     <p class="seccion-label">Datos personales</p>
 
     <label>Nombre:</label>
-    <input type="text" id="nombre" name="Nombre" placeholder="Ej: Luis"><br><br>
+    <input type="text" id="nombre" name="Nombre" placeholder="Luis"><br><br>
 
     <label>Apellidos:</label>
-    <input type="text" id="apellidos" name="Apellidos" placeholder="Ej: Diaz Mora"><br><br>
+    <input type="text" id="apellidos" name="Apellidos" placeholder="Diaz Mora"><br><br>
 
     <label>Cédula:</label>
     <input type="text" id="cedula" name="Cedula" placeholder="0-0000-0000"><br><br>
@@ -132,6 +136,7 @@
 </footer>
 
 <script src="validacionTrabajo.js"></script>
+<script src="validarTamaño.js"></script>
 
 </body>
 </html>
