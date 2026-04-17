@@ -5,30 +5,35 @@
 }
 
 body {
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-image: url("fondo.svg");
   background-repeat: repeat;
-  margin: 0;
-    overflow-x: hidden; /* seguridad extra */
+  overflow-x: hidden;
+  padding-top: 80px;
 }
+
 
 nav {
   background-color: #133f22;
-  padding: 0px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
 }
 
+.nav-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 nav li {
@@ -38,7 +43,7 @@ nav li {
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   transition: color 0.3s;
 }
 
@@ -46,18 +51,35 @@ nav a:hover {
   color: #90ee90;
 }
 
-body {
-  padding-top: 120px;
+.hamburguesa {  /* Es como se hace el menu cuando la pantalla esta pequeña */
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
 }
+
+
+h1 {
+  text-align: center;
+  color: #2d5016;
+  font-size: clamp(28px, 5vw, 48px); /* escala automático */
+  margin: 40px 20px;
+}
+
 
 .slider {
   text-align: center;
   margin: 40px 0;
+  padding: 0 20px;
 }
 
 .slider img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 100%; 
+  height: auto;
 }
 
 .slider button {
@@ -75,26 +97,31 @@ body {
   background-color: #3d6020;
 }
 
+
 .imagenes-enlaces {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin: 40px 0;
+  margin: 40px 20px;
+  flex-wrap: wrap; /* se acomodan en varias filas si no caben */
 }
 
 .imagenes-enlaces img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
+  max-width: 100%;
+  height: auto;
 }
 
 .imagenes-enlaces img:hover {
   transform: scale(1.05);
 }
 
+
 .galeria {
   text-align: center;
-  margin: 40px 0;
+  margin: 40px 20px;
 }
 
 .galeria img {
@@ -102,11 +129,14 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 10px;
   transition: transform 0.3s;
+  max-width: 100%;
+  height: auto;
 }
 
 .galeria img:hover {
   transform: scale(1.05);
 }
+
 
 footer {
   background-color: #2d5016;
@@ -129,12 +159,6 @@ footer a:hover {
   color: #90ee90;
 }
 
-h1 {
-  text-align: center;
-  color: #2d5016;
-  font-size: 48px;
-  margin: 40px 0;
-}
 
 .menu-container {
   max-width: 900px;
@@ -151,9 +175,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 30px;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .tarjeta-menu:hover {
@@ -166,6 +188,7 @@ h1 {
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
+  flex-shrink: 0; /* no se encoge raro */
 }
 
 .info-plato h2 {
@@ -180,11 +203,10 @@ h1 {
   line-height: 1.6;
 }
 
-
-/* Contacto Luis */
-
+/* Contacto */
 .contenedor-contacto {
-  width: 600px;
+  width: 90%;
+  max-width: 600px; 
   margin: auto;
   font-size: 22px;
   font-weight: bold;
@@ -246,27 +268,26 @@ textarea {
   transform: scale(1.5);
 }
 
-/* Trabaja con nosostros Luis */
+/* Trabaja con nosostros */
 .beneficios-container {
   display: flex;
   justify-content: center;
-  gap: 200px;
+  gap: 40px; 
   max-width: 900px;
   margin: 0 auto 40px;
   padding: 0 20px;
+  flex-wrap: wrap;
 }
 
 .beneficio-tarjeta {
   background-color: white;
   border-radius: 15px;
-  white-space: nowrap; /* no hace saltos entre linea */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 50px 40px;
   text-align: center;
   flex: 1;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  min-width: 200px; /* mínimo antes de apilarse */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .beneficio-tarjeta:hover {
@@ -304,7 +325,8 @@ textarea {
 }
 
 .contenedor-trabajo {
-  width: 1000px;
+  width: 90%;
+  max-width: 1000px; 
   margin: auto;
   font-size: 22px;
   font-weight: bold;
@@ -344,22 +366,18 @@ textarea {
   resize: none;
 }
 
-/*-----------------------------------------Estilos Juan----------------------------------*/
-/*-----------------------------------------Ubicaciones ----------------------------------*/
-/*-----------------------------------------Estilos Juan----------------------------------*/
-
+/* Estilos juan  */
 .section {
   display: flex;
-  height: 100vh;
+  min-height: 100vh; 
+  flex-wrap: wrap;
 }
-
 
 .aside {
   width: 50%;
   padding: 20px;
   background-color: #ffffff;
 }
-
 
 .div {
   width: 50%;
@@ -368,60 +386,59 @@ textarea {
   align-items: center;
 }
 
-
 .div img {
-  width: auto;
+  max-width: 100%;
   height: auto;
-} 
-
-
-
-/* Contenedor general */
-.contenedor-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columnas */
-  gap: 20px;
-  padding: 20px;
-
 }
 
- /* Tarjeta */
+.contenedor-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
 .card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f5f5f5;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 20px;
   border: 1px solid #ddd;
+  overflow: hidden;
 }
 
+.card img {
+  height: 180px;
+  object-fit: cover;
+}
 
- /* Texto */
+.card-title {
+  font-weight: bold;
+}
+
 .info h3 {
   margin: 0;
   font-size: 20px;
 }
 
-
-
 .info p {
   margin: 5px 0;
   color: #555;
+}
 
-
-} /* Links */
 .links {
   margin-top: 10px;
 }
+
 .links a {
   margin-right: 15px;
   text-decoration: none;
   color: green;
   font-size: 14px;
+}
 
-
-} /* Botón */
 .accion button {
   padding: 10px 20px;
   border: 2px solid green;
@@ -430,45 +447,161 @@ textarea {
   color: green;
   font-weight: bold;
   cursor: pointer;
+}
 
-} /* Efecto hover */
 .accion button:hover {
   background-color: green;
   color: white;
 }
 
-
-@media (max-width: 768px) {
-  body {
-    background-color: rgb(255, 255, 255);
-  }
-}
-/*-----------------------------------------Division----------------------------------*/
-/*-----------------------------------------Promociones----------------------------------*/
-/*-----------------------------------------Division----------------------------------*/
-
-.card {
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.card img {
-    height: 180px;
-    object-fit: cover;
-}
-
-.card-title {
-    font-weight: bold;
-}
-
 .btn-success {
-    background-color: #2e5e2e;
-    border: none;
+  background-color: #2e5e2e;
+  border: none;
 }
 
 .btn-success:hover {
-    background-color: #1e3f1e;
+  background-color: #1e3f1e;
 }
-/*-----------------------------------------Estilos Juan----------------------------------*/
-/*-----------------------------------------Estilos Juan----------------------------------*/
-/*-----------------------------------------Estilos Juan----------------------------------*/
+
+/* Responisve para tablets */
+@media (max-width: 768px) {
+
+  /* Navbar hamburguesa */
+  .hamburguesa {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #133f22;
+    padding: 10px 0;
+    gap: 0;
+  }
+
+  nav ul.abierto {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-top: 1px solid #2d5016;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+  
+  .tarjeta-menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tarjeta-menu img {
+    width: 100%;
+    height: 200px;
+  }
+
+  /* Formulario contacto */
+  .contenedor-contacto {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .contenedor-contacto input,
+  .contenedor-contacto select,
+  .contenedor-contacto textarea {
+    font-size: 16px;
+  }
+
+  .botones-form input {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  /* Formulario trabajo */
+  .fila-form {
+    flex-direction: column; /* columnas se apilan */
+  }
+
+  .contenedor-trabajo {
+    font-size: 18px;
+  }
+
+  /* Sección Juan */
+  .section {
+    flex-direction: column;
+  }
+
+  .aside,
+  .div {
+    width: 100%;
+  }
+
+  .contenedor-cards {
+    grid-template-columns: 1fr; /* 1 columna en tablet */
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+/* Responsive moviles */
+@media (max-width: 480px) {
+
+  body {
+    padding-top: 65px;
+  }
+
+  /* Formulario contacto */
+  .contenedor-contacto {
+    font-size: 16px;
+    padding: 12px;
+    width: 95%;
+  }
+
+  .contenedor-contacto input,
+  .contenedor-contacto select,
+  .contenedor-contacto textarea {
+    font-size: 14px;
+  }
+
+  /* Botones apilados */
+  .botones-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .botones-form input {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  /* Galería en 2 columnas en vez de 4 */
+  .galeria img {
+    width: calc(50% - 20px);
+  }
+
+  /* Beneficios apilados */
+  .beneficios-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .beneficio-tarjeta {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
