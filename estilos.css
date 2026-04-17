@@ -180,7 +180,9 @@ h1 {
   line-height: 1.6;
 }
 
-/* Contacto*/
+
+/* Contacto Luis */
+
 .contenedor-contacto {
   width: 600px;
   margin: auto;
@@ -244,7 +246,7 @@ textarea {
   transform: scale(1.5);
 }
 
-/* Trabaja con nosostros */
+/* Trabaja con nosostros Luis */
 .beneficios-container {
   display: flex;
   justify-content: center;
@@ -340,5 +342,131 @@ textarea {
 #experiencia {
   height: 260px;
   resize: none;
+}
+
+/*-----------------------------------------Estilos Juan----------------------------------*/
+/*-----------------------------------------Estilos Juan----------------------------------*/
+/*-----------------------------------------Estilos Juan----------------------------------*/
+
+.section {
+  display: flex;
+  height: 100vh;
+}
+
+
+.aside {
+  width: 50%;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+
+.div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.div img {
+  width: auto;
+  height: auto;
+} 
+
+
+
+/* Contenedor general */
+.contenedor-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas */
+  gap: 20px;
+  padding: 20px;
+
+}
+
+ /* Tarjeta */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+
+ /* Texto */
+.info h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+
+
+.info p {
+  margin: 5px 0;
+  color: #555;
+
+
+} /* Links */
+.links {
+  margin-top: 10px;
+}
+.links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: green;
+  font-size: 14px;
+
+
+} /* Botón */
+.accion button {
+  padding: 10px 20px;
+  border: 2px solid green;
+  background: transparent;
+  border-radius: 20px;
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+
+} /* Efecto hover */
+.accion button:hover {
+  background-color: green;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+}
+/*-----------------------------------------Estilos Juan----------------------------------*/
+/*-----------------------------------------Estilos Juan----------------------------------*/
+/*-----------------------------------------Estilos Juan----------------------------------*/
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #2e5e2e;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #1e3f1e;
 }
 
