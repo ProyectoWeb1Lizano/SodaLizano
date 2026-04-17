@@ -387,7 +387,7 @@ textarea {
 }
 
 .div img {
-  max-width: 100%;
+  width: 846px;  
   height: auto;
 }
 
@@ -461,6 +461,58 @@ textarea {
 
 .btn-success:hover {
   background-color: #1e3f1e;
+} 
+@media (max-width: 768px) {
+
+  .section {
+    flex-direction: column;
+  }
+
+  .aside {
+    width: 100%;
+    text-align: center;
+  }
+
+  .div {
+    width: 100%;
+    overflow-x: hidden; /* ❌ quita scroll */
+  }
+
+  .div img {
+    width: 100%;   /* 🔥 se adapta */
+    height: auto;
+  }
+
+}
+
+/*Tablet*/
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .aside {
+    width: 100%;
+  }
+
+  .div {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .contenedor-cards {
+    grid-template-columns: 1fr 1fr; /* 2 por fila */
+  }
+
+}
+/*Pc*/
+@media (min-width: 1025px) {
+
+  .contenedor-cards {
+    grid-template-columns: 1fr 1fr; /* puedes cambiar a 3 si quieres */
+  }
+
 }
 
 /* Responisve para tablets */
