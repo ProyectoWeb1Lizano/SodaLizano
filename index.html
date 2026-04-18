@@ -27,13 +27,18 @@
     <br><br><br>
 
     <div class="slider">
-        <img id="ImgSld1" src="IMG/megapapas.png" alt="MegaPapas" width="600">
-        <button onclick="anterior()">Anterior</button>
-        <button onclick="siguiente()">Siguiente</button>
+    <button class="slider-btn slider-btn-left" onclick="anterior()">&#8249;</button>
+    <img id="ImgSld1" src="IMG/megapapash.png" alt="MegaPapas" width="600">
+    <button class="slider-btn slider-btn-right" onclick="siguiente()">&#8250;</button>
+</div>
+
+    <br><br>
+
+    <div class="titulo-burbuja">
+        <h2>Promociones</h2>
     </div>
 
-    <br><br><br>
-
+    <br>
 
     <div class="imagenes-enlaces">
         <a href="promociones.html">
@@ -49,47 +54,70 @@
         </a>
     </div>
 
-    <br><br><br>
+    <br><br>
 
-    <div class="galeria">
-
-        <a href="menu.html">
-            <img src="IMG/cantones.png" alt="Producto 1" width="250">
-        </a>
-        
-        <a href="menu.html">
-            <img src="IMG/chopsuey.png" alt="Producto 2" width="250">
-        </a>
-        
-        <a href="menu.html">
-            <img src="IMG/patacones.png" alt="Producto 3" width="250">
-        </a>
-        
-        <a href="menu.html">
-            <img src="IMG/megapapas.png" alt="Producto 4" width="250">
-        </a>
-        
-        <br>
-        
-        <a href="menu.html">
-            <img src="IMG/pollo.png" alt="Producto 5" width="250">
-        </a>
-        
-        <a href="menu.html">
-            <img src="IMG/salchipapa.png" alt="Producto 6" width="250">
-        </a>
-        
-        <a href="menu.html">
-            <img src="IMG/salchipapicarne.png" alt="Producto 7" width="250">
-        </a>
-        
-        <a href="menu.html">
-            <img src="IMG/surtido.png" alt="Producto 8" width="250">
-        </a>
+    <div class="titulo-burbuja">
+        <h2>Nuestros platos</h2>
     </div>
 
+    <br>
+
+    <table class="galeria">
+    <tr>
+        <td>
+            <a href="menu.html">
+                <img src="IMG/cantones.png" alt="Producto 1" width="250">
+            </a>
+        </td>
+        
+        <td>
+            <a href="menu.html">
+                <img src="IMG/chopsuey.png" alt="Producto 2" width="250">
+            </a>
+        </td>
+        
+        <td>
+            <a href="menu.html">
+                <img src="IMG/patacones.png" alt="Producto 3" width="250">
+            </a>
+        </td>
+        
+        <td>
+            <a href="menu.html">
+                <img src="IMG/megapapas.png" alt="Producto 4" width="250">
+            </a>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <a href="menu.html">
+                <img src="IMG/pollo.png" alt="Producto 5" width="250">
+            </a>
+        </td>
+        
+        <td>
+            <a href="menu.html">
+                <img src="IMG/salchipapa.png" alt="Producto 6" width="250">
+            </a>
+        </td>
+        
+        <td>
+            <a href="menu.html">
+                <img src="IMG/salchipapicarne.png" alt="Producto 7" width="250">
+            </a>
+        </td>
+        
+        <td>
+            <a href="menu.html">
+                <img src="IMG/surtido.png" alt="Producto 8" width="250">
+            </a>
+        </td>
+    </tr>
+</table>
+
     <script>
-        var ImgSld = ["IMG/megapapas.png", "IMG/chopsuey.png", "IMG/pollo.png"];
+        var ImgSld = ["IMG/megapapash.png", "IMG/chopsueyh.png", "IMG/polloh.png", "IMG/cantonesh.png", "IMG/pataconesh.png"];
         var pos = 0;
         function siguiente(){
             pos = pos + 1;

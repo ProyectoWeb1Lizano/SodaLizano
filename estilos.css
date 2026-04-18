@@ -70,33 +70,72 @@ h1 {
 
 
 .slider {
+  position: relative;
   text-align: center;
-  margin: 40px 0;
-  padding: 0 20px;
+  margin: 40px auto;
+  padding: 0 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .slider img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 100%; 
+  max-width: 800px;
+  width: 100%;
   height: auto;
+  display: block;
 }
 
-.slider button {
-  margin: 20px 10px;
-  padding: 10px 20px;
-  background-color: #2d5016;
-  color: white;
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #C3C3C3;
   border: none;
-  border-radius: 5px;
+  font-size: 60px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  font-size: 16px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
 }
 
-.slider button:hover {
-  background-color: #3d6020;
+.slider-btn:hover {
+  color: #133F22;
 }
 
+.slider-btn-left {
+  left: 320px;
+}
+
+.slider-btn-right {
+  right: 320px;
+}
+
+.titulo-burbuja {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.titulo-burbuja h2 {
+  display: inline-block;
+  background-color: #133F22;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 .imagenes-enlaces {
   display: flex;
@@ -118,10 +157,21 @@ h1 {
   transform: scale(1.05);
 }
 
-
 .galeria {
   text-align: center;
-  margin: 40px 20px;
+  margin: 40px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 15px solid #133F22;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 95%;
+}
+
+.galeria td {
+  padding: 10px;
+  text-align: center;
+  border: 15px solid #133F22;
 }
 
 .galeria img {
@@ -139,7 +189,7 @@ h1 {
 
 
 footer {
-  background-color: #2d5016;
+  background-color: #133F22;
   color: white;
   text-align: center;
   padding: 30px 20px;
