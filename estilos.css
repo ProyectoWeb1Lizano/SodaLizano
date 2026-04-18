@@ -410,8 +410,8 @@ textarea {
 }
 
 .card img {
-  height: 180px;
-  object-fit: cover;
+    height: 350px;
+    object-fit: contain;
 }
 
 .card-title {
