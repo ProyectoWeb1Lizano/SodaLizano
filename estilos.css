@@ -525,11 +525,11 @@ textarea {
 
   .div {
     width: 100%;
-    overflow-x: hidden; /* ❌ quita scroll */
+    overflow-x: hidden; 
   }
 
   .div img {
-    width: 100%;   /* 🔥 se adapta */
+    width: 100%;   
     height: auto;
   }
 
@@ -560,7 +560,7 @@ textarea {
 @media (min-width: 1025px) {
 
   .contenedor-cards {
-    grid-template-columns: 1fr 1fr; /* puedes cambiar a 3 si quieres */
+    grid-template-columns: 1fr 1fr; 
   }
 
 }
