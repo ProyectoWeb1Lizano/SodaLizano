@@ -155,33 +155,29 @@ h1 {
 }
 
 .galeria {
-  width: 100%;
+  width: auto;
   margin: 40px auto;
   border-collapse: separate;
   border-spacing: 15px;
   background-color: #133F22;
   border: 15px solid #133F22;
   border-radius: 15px;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 .galeria td {
-  padding: 0;
+  padding: 10px;
   background-color: white;
   border-radius: 10px;
-  width: 25%;
-  text-align: center;
-  overflow: hidden;
 }
 
 .galeria a {
   display: block;
-  width: 100%;
-  line-height: 0;
 }
 
 .galeria img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 10px;
@@ -193,6 +189,10 @@ h1 {
     margin: 20px auto;
     border-spacing: 8px;
     border: 8px solid #133F22;
+  }
+  
+  .galeria td {
+    padding: 6px;
   }
 }
 
