@@ -155,29 +155,76 @@ h1 {
 }
 
 .galeria {
-  display: block;
-  overflow-x: auto;
-  margin: 40px auto;
+  width: 100%;
   max-width: 95%;
+  margin: 40px auto;
+  border-collapse: separate;
+  border-spacing: 15px;
+  background-color: #133F22;
   border: 15px solid #133F22;
   border-radius: 15px;
 }
 
-.galeria table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
 .galeria td {
   padding: 10px;
-  border: 15px solid #133F22;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.galeria a {
+  display: block;
 }
 
 .galeria img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  display: block;
   border-radius: 10px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .galeria {
+    margin: 20px auto;
+    border-spacing: 10px;
+    border: 10px solid #133F22;
+  }
+  
+  .galeria td {
+    padding: 8px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+  .galeria {
+    margin: 15px auto;
+    max-width: 98%;
+    border-spacing: 5px;
+    border: 5px solid #133F22;
+  }
+  
+  .galeria td {
+    padding: 5px;
+  }
+}
+
+/* Para pantallas muy pequeñas - mostrar solo 2 columnas */
+@media (max-width: 400px) {
+  .galeria {
+    border-spacing: 3px;
+    border: 3px solid #133F22;
+  }
+  
+  .galeria td {
+    padding: 3px;
+  }
+  
+  /* Ocultar 3ra y 4ta columna, apilar todo en 2 columnas */
+  .galeria td:nth-child(3),
+  .galeria td:nth-child(4) {
+    display: none;
+  }
 }
 
 footer {
