@@ -155,7 +155,7 @@ h1 {
 }
 
 .galeria {
-  width: 80%;
+  width: 100%;
   margin: 40px auto;
   border-collapse: separate;
   border-spacing: 15px;
@@ -181,7 +181,7 @@ h1 {
 }
 
 .galeria img {
-  width: auto;
+  width: 100%;
   height: auto;
   display: block;
   border-radius: 10px;
@@ -196,45 +196,10 @@ h1 {
   }
 }
 
-/* Móvil - REORGANIZAR A 2 COLUMNAS */
+/* Móvil - OCULTAR TABLA */
 @media (max-width: 480px) {
   .galeria {
-    margin: 10px;
-    border-spacing: 0;
-    border: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    background-color: #133F22;
-    border-radius: 15px;
-    padding: 5px;
-  }
-  
-  .galeria tbody,
-  .galeria tr {
-    display: contents; /* CLAVE: hace que los hijos se comporten como si no existieran estos contenedores */
-  }
-  
-  .galeria td {
-    display: block;
-    width: 100%;
-    padding: 0;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .galeria a {
-    width: 100%;
-    display: block;
-    line-height: 0;
-  }
-  
-  .galeria img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
+    display: none; /* La tabla desaparece completamente */
   }
 }
 
