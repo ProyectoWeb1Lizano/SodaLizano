@@ -199,42 +199,42 @@ h1 {
 /* Móvil - REORGANIZAR A 2 COLUMNAS */
 @media (max-width: 480px) {
   .galeria {
-    margin: 10px auto;
-    border-spacing: 0; /* CAMBIO CLAVE: Eliminar border-spacing */
-    border: 5px solid #133F22;
-    display: block;
-    padding: 5px; /* Agregar padding interno en su lugar */
-  }
-  
-  .galeria tbody {
-    display: block;
-  }
-  
-  .galeria tr {
+    margin: 10px;
+    border-spacing: 0;
+    border: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
-    margin-bottom: 5px;
+    background-color: #133F22;
+    border-radius: 15px;
+    padding: 5px;
   }
   
-  .galeria tr:last-child {
-    margin-bottom: 0; /* Eliminar margen del último row */
+  .galeria tbody,
+  .galeria tr {
+    display: contents; /* CLAVE: hace que los hijos se comporten como si no existieran estos contenedores */
   }
   
   .galeria td {
     display: block;
     width: 100%;
     padding: 0;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
   }
   
   .galeria a {
     width: 100%;
     display: block;
+    line-height: 0;
   }
   
   .galeria img {
     width: 100%;
     height: auto;
+    display: block;
+    border-radius: 10px;
   }
 }
 
