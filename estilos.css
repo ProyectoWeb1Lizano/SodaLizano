@@ -166,18 +166,18 @@ h1 {
 }
 
 .galeria td {
-  padding: 0; /* ELIMINAR padding para que la imagen llene todo */
+  padding: 0;
   background-color: white;
   border-radius: 10px;
   width: 25%;
   text-align: center;
-  overflow: hidden; /* Asegura que el border-radius se aplique correctamente */
+  overflow: hidden;
 }
 
 .galeria a {
-  display: block; /* Cambiado a block para que ocupe todo el espacio */
+  display: block;
   width: 100%;
-  line-height: 0; /* Elimina espacio extra debajo de la imagen */
+  line-height: 0;
 }
 
 .galeria img {
@@ -200,9 +200,10 @@ h1 {
 @media (max-width: 480px) {
   .galeria {
     margin: 10px auto;
-    border-spacing: 5px;
+    border-spacing: 0; /* CAMBIO CLAVE: Eliminar border-spacing */
     border: 5px solid #133F22;
     display: block;
+    padding: 5px; /* Agregar padding interno en su lugar */
   }
   
   .galeria tbody {
@@ -216,10 +217,14 @@ h1 {
     margin-bottom: 5px;
   }
   
+  .galeria tr:last-child {
+    margin-bottom: 0; /* Eliminar margen del último row */
+  }
+  
   .galeria td {
-    display: block; /* Cambiado de flex a block */
+    display: block;
     width: 100%;
-    padding: 0; /* Sin padding */
+    padding: 0;
   }
   
   .galeria a {
