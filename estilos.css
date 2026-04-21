@@ -155,7 +155,7 @@ h1 {
 }
 
 .galeria {
-  width: 100%;
+  width: 80%;
   margin: 40px auto;
   border-collapse: separate;
   border-spacing: 15px;
@@ -181,7 +181,7 @@ h1 {
 }
 
 .galeria img {
-  width: 100%;
+  width: auto;
   height: auto;
   display: block;
   border-radius: 10px;
