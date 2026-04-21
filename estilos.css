@@ -170,10 +170,12 @@ h1 {
   background-color: white;
   border-radius: 10px;
   width: 25%;
+  text-align: center; /* Centra el contenido */
 }
 
 .galeria a {
-  display: block;
+  display: inline-block; /* Cambiado de block a inline-block */
+  max-width: 100%;
 }
 
 .galeria img {
@@ -181,6 +183,20 @@ h1 {
   height: auto;
   display: block;
   border-radius: 10px;
+  margin: 0 auto; /* Centra la imagen */
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .galeria {
+    margin: 20px auto;
+    border-spacing: 8px;
+    border: 8px solid #133F22;
+  }
+  
+  .galeria td {
+    padding: 6px;
+  }
 }
 
 /* Móvil - REORGANIZAR A 2 COLUMNAS */
@@ -198,15 +214,27 @@ h1 {
   
   .galeria tr {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
     gap: 5px;
     margin-bottom: 5px;
   }
   
   .galeria td {
-    display: block;
+    display: flex; /* Usa flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-start; /* Alinea arriba */
     width: 100%;
     padding: 5px;
+  }
+  
+  .galeria a {
+    width: 100%; /* El enlace ocupa todo el ancho disponible */
+    display: block;
+  }
+  
+  .galeria img {
+    width: 100%; /* La imagen ocupa todo el ancho del enlace */
+    height: auto;
   }
 }
 
