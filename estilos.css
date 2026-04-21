@@ -13,7 +13,6 @@ body {
   padding-top: 80px;
 }
 
-
 nav {
   background-color: #133f22;
   position: fixed;
@@ -51,7 +50,7 @@ nav a:hover {
   color: #90ee90;
 }
 
-.hamburguesa {  /* Es como se hace el menu cuando la pantalla esta pequeña */
+.hamburguesa {
   display: none;
   background: none;
   border: none;
@@ -60,14 +59,12 @@ nav a:hover {
   cursor: pointer;
 }
 
-
 h1 {
   text-align: center;
   color: #2d5016;
-  font-size: clamp(28px, 5vw, 48px); /* escala automático */
+  font-size: clamp(28px, 5vw, 48px);
   margin: 40px 20px;
 }
-
 
 .slider {
   position: relative;
@@ -142,7 +139,7 @@ h1 {
   justify-content: center;
   gap: 30px;
   margin: 40px 20px;
-  flex-wrap: wrap; /* se acomodan en varias filas si no caben */
+  flex-wrap: wrap;
 }
 
 .imagenes-enlaces img {
@@ -187,7 +184,6 @@ h1 {
   transform: scale(1.05);
 }
 
-
 footer {
   background-color: #133F22;
   color: white;
@@ -208,7 +204,6 @@ footer a {
 footer a:hover {
   color: #90ee90;
 }
-
 
 .menu-container {
   max-width: 900px;
@@ -238,7 +233,7 @@ footer a:hover {
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
-  flex-shrink: 0; /* no se encoge raro */
+  flex-shrink: 0;
 }
 
 .info-plato h2 {
@@ -253,10 +248,9 @@ footer a:hover {
   line-height: 1.6;
 }
 
-/* Contacto */
 .contenedor-contacto {
   width: 90%;
-  max-width: 600px; 
+  max-width: 600px;
   margin: auto;
   font-size: 22px;
   font-weight: bold;
@@ -318,11 +312,10 @@ textarea {
   transform: scale(1.5);
 }
 
-/* Trabaja con nosostros */
 .beneficios-container {
   display: flex;
   justify-content: center;
-  gap: 40px; 
+  gap: 40px;
   max-width: 900px;
   margin: 0 auto 40px;
   padding: 0 20px;
@@ -336,7 +329,7 @@ textarea {
   padding: 50px 40px;
   text-align: center;
   flex: 1;
-  min-width: 200px; /* mínimo antes de apilarse */
+  min-width: 200px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -376,7 +369,7 @@ textarea {
 
 .contenedor-trabajo {
   width: 90%;
-  max-width: 1000px; 
+  max-width: 1000px;
   margin: auto;
   font-size: 22px;
   font-weight: bold;
@@ -416,10 +409,9 @@ textarea {
   resize: none;
 }
 
-/* Estilos juan  */
 .section {
   display: flex;
-  min-height: 100vh; 
+  min-height: 100vh;
   flex-wrap: wrap;
 }
 
@@ -437,7 +429,7 @@ textarea {
 }
 
 .div img {
-  width: 846px;  
+  width: 846px;
   height: auto;
 }
 
@@ -460,8 +452,8 @@ textarea {
 }
 
 .card img {
-    height: 350px;
-    object-fit: contain;
+  height: 350px;
+  object-fit: contain;
 }
 
 .card-title {
@@ -511,7 +503,8 @@ textarea {
 
 .btn-success:hover {
   background-color: #1e3f1e;
-} 
+}
+
 @media (max-width: 768px) {
 
   .section {
@@ -525,17 +518,19 @@ textarea {
 
   .div {
     width: 100%;
-    overflow-x: hidden; 
+    overflow-x: hidden;
   }
 
   .div img {
-    width: 100%;   
+    width: 100%;
     height: auto;
   }
 
+  .video-container {
+    aspect-ratio: 16 / 9;
+  }
 }
 
-/*Tablet*/
 @media (min-width: 769px) and (max-width: 1024px) {
 
   .aside {
@@ -552,23 +547,29 @@ textarea {
   }
 
   .contenedor-cards {
-    grid-template-columns: 1fr 1fr; /* 2 por fila */
+    grid-template-columns: 1fr 1fr;
   }
-
-}
-/*Pc*/
-@media (min-width: 1025px) {
-
-  .contenedor-cards {
-    grid-template-columns: 1fr 1fr; 
-  }
-
 }
 
-/* Responisve para tablets */
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.no-touch {
+  pointer-events: none;
+}
+
 @media (max-width: 768px) {
 
-  /* Navbar hamburguesa */
   .hamburguesa {
     display: block;
   }
@@ -597,7 +598,6 @@ textarea {
     font-size: 15px;
   }
 
-  
   .tarjeta-menu {
     flex-direction: column;
     text-align: center;
@@ -608,7 +608,6 @@ textarea {
     height: 200px;
   }
 
-  /* Formulario contacto */
   .contenedor-contacto {
     font-size: 18px;
     padding: 15px;
@@ -625,16 +624,14 @@ textarea {
     padding: 10px 16px;
   }
 
-  /* Formulario trabajo */
   .fila-form {
-    flex-direction: column; /* columnas se apilan */
+    flex-direction: column;
   }
 
   .contenedor-trabajo {
     font-size: 18px;
   }
 
-  /* Sección Juan */
   .section {
     flex-direction: column;
   }
@@ -645,7 +642,7 @@ textarea {
   }
 
   .contenedor-cards {
-    grid-template-columns: 1fr; /* 1 columna en tablet */
+    grid-template-columns: 1fr;
   }
 
   .card {
@@ -655,14 +652,12 @@ textarea {
   }
 }
 
-/* Responsive moviles */
 @media (max-width: 480px) {
 
   body {
     padding-top: 65px;
   }
 
-  /* Formulario contacto */
   .contenedor-contacto {
     font-size: 16px;
     padding: 12px;
@@ -675,7 +670,6 @@ textarea {
     font-size: 14px;
   }
 
-  /* Botones apilados */
   .botones-form {
     flex-direction: column;
     gap: 10px;
@@ -687,12 +681,10 @@ textarea {
     padding: 10px;
   }
 
-  /* Galería en 2 columnas en vez de 4 */
   .galeria img {
     width: calc(50% - 20px);
   }
 
-  /* Beneficios apilados */
   .beneficios-container {
     flex-direction: column;
     align-items: center;
@@ -707,3 +699,4 @@ textarea {
     font-size: 12px;
   }
 }
+
