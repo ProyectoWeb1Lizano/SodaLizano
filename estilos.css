@@ -186,44 +186,39 @@ h1 {
 @media (max-width: 768px) {
   .galeria {
     margin: 20px auto;
-    border-spacing: 10px;
-    border: 10px solid #133F22;
+    border-spacing: 8px;
+    border: 8px solid #133F22;
   }
   
   .galeria td {
-    padding: 8px;
+    padding: 6px;
   }
 }
 
 /* Móvil */
 @media (max-width: 480px) {
   .galeria {
-    margin: 15px auto;
+    margin: 10px auto;
     max-width: 98%;
-    border-spacing: 5px;
-    border: 5px solid #133F22;
+    border-spacing: 4px;
+    border: 4px solid #133F22;
   }
   
   .galeria td {
-    padding: 5px;
+    padding: 4px;
   }
 }
 
-/* Para pantallas muy pequeñas - mostrar solo 2 columnas */
-@media (max-width: 400px) {
+/* Pantallas muy pequeñas */
+@media (max-width: 360px) {
   .galeria {
-    border-spacing: 3px;
-    border: 3px solid #133F22;
+    margin: 5px auto;
+    border-spacing: 2px;
+    border: 2px solid #133F22;
   }
   
   .galeria td {
-    padding: 3px;
-  }
-  
-  /* Ocultar 3ra y 4ta columna, apilar todo en 2 columnas */
-  .galeria td:nth-child(3),
-  .galeria td:nth-child(4) {
-    display: none;
+    padding: 2px;
   }
 }
 
