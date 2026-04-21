@@ -155,27 +155,22 @@ h1 {
 }
 
 .galeria {
-  width: 100%;
   margin: 40px auto;
   border-collapse: separate;
   border-spacing: 15px;
   background-color: #133F22;
   border: 15px solid #133F22;
   border-radius: 15px;
-  table-layout: fixed;
 }
 
 .galeria td {
   padding: 10px;
   background-color: white;
   border-radius: 10px;
-  width: 25%;
-  text-align: center; /* Centra el contenido */
 }
 
 .galeria a {
-  display: inline-block; /* Cambiado de block a inline-block */
-  max-width: 100%;
+  display: block;
 }
 
 .galeria img {
@@ -183,7 +178,6 @@ h1 {
   height: auto;
   display: block;
   border-radius: 10px;
-  margin: 0 auto; /* Centra la imagen */
 }
 
 /* Tablet */
@@ -199,7 +193,7 @@ h1 {
   }
 }
 
-/* Móvil - REORGANIZAR A 2 COLUMNAS */
+/* Móvil - 2 columnas */
 @media (max-width: 480px) {
   .galeria {
     margin: 10px auto;
@@ -208,33 +202,16 @@ h1 {
     display: block;
   }
   
-  .galeria tbody {
-    display: block;
-  }
-  
+  .galeria tbody,
   .galeria tr {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
-    gap: 5px;
-    margin-bottom: 5px;
+    display: block;
   }
   
   .galeria td {
-    display: flex; /* Usa flexbox para centrar */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: flex-start; /* Alinea arriba */
-    width: 100%;
+    display: inline-block;
+    width: calc(50% - 5px);
     padding: 5px;
-  }
-  
-  .galeria a {
-    width: 100%; /* El enlace ocupa todo el ancho disponible */
-    display: block;
-  }
-  
-  .galeria img {
-    width: 100%; /* La imagen ocupa todo el ancho del enlace */
-    height: auto;
+    vertical-align: top;
   }
 }
 
