@@ -156,19 +156,20 @@ h1 {
 
 .galeria {
   width: 100%;
-  max-width: 95%;
   margin: 40px auto;
   border-collapse: separate;
   border-spacing: 15px;
   background-color: #133F22;
   border: 15px solid #133F22;
   border-radius: 15px;
+  table-layout: fixed; /* Esto distribuye el espacio equitativamente */
 }
 
 .galeria td {
   padding: 10px;
   background-color: white;
   border-radius: 10px;
+  width: 25%; /* Cada celda ocupa 25% (4 columnas) */
 }
 
 .galeria a {
@@ -199,7 +200,6 @@ h1 {
 @media (max-width: 480px) {
   .galeria {
     margin: 10px auto;
-    max-width: 98%;
     border-spacing: 4px;
     border: 4px solid #133F22;
   }
