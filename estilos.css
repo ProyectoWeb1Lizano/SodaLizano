@@ -155,22 +155,29 @@ h1 {
 }
 
 .galeria {
+  width: 100%;
   margin: 40px auto;
   border-collapse: separate;
   border-spacing: 15px;
   background-color: #133F22;
   border: 15px solid #133F22;
   border-radius: 15px;
+  table-layout: fixed;
 }
 
 .galeria td {
-  padding: 10px;
+  padding: 0; /* ELIMINAR padding para que la imagen llene todo */
   background-color: white;
   border-radius: 10px;
+  width: 25%;
+  text-align: center;
+  overflow: hidden; /* Asegura que el border-radius se aplique correctamente */
 }
 
 .galeria a {
-  display: block;
+  display: block; /* Cambiado a block para que ocupe todo el espacio */
+  width: 100%;
+  line-height: 0; /* Elimina espacio extra debajo de la imagen */
 }
 
 .galeria img {
@@ -187,13 +194,9 @@ h1 {
     border-spacing: 8px;
     border: 8px solid #133F22;
   }
-  
-  .galeria td {
-    padding: 6px;
-  }
 }
 
-/* Móvil - 2 columnas */
+/* Móvil - REORGANIZAR A 2 COLUMNAS */
 @media (max-width: 480px) {
   .galeria {
     margin: 10px auto;
@@ -202,16 +205,31 @@ h1 {
     display: block;
   }
   
-  .galeria tbody,
-  .galeria tr {
+  .galeria tbody {
     display: block;
   }
   
+  .galeria tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  
   .galeria td {
-    display: inline-block;
-    width: calc(50% - 5px);
-    padding: 5px;
-    vertical-align: top;
+    display: block; /* Cambiado de flex a block */
+    width: 100%;
+    padding: 0; /* Sin padding */
+  }
+  
+  .galeria a {
+    width: 100%;
+    display: block;
+  }
+  
+  .galeria img {
+    width: 100%;
+    height: auto;
   }
 }
 
