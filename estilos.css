@@ -81,7 +81,7 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 800px;
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
 }
@@ -161,7 +161,7 @@ h1 {
 }
 
 .galeria {
-  width: auto;
+  width: 90%;
   margin: 40px auto;
   border-collapse: separate;
   border-spacing: 15px;
