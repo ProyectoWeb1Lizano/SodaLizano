@@ -180,56 +180,25 @@ h1 {
   border-radius: 10px;
 }
 
-.footer {
-  background-color: #e9efe9;
-  padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
+footer {
+  background-color: #133F22;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+footer p {
+  margin: 10px 0;
 }
 
-.footer-col {
-  flex: 1;
-  min-width: 180px;
-}
-
-.footer-col h3 {
-  color: #2e5e2e;
-  margin-bottom: 10px;
-}
-
-.footer-col h2 {
-  color: #2e5e2e;
-  margin-bottom: 5px;
-}
-
-.footer-col p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col ul li {
-  margin-bottom: 6px;
-}
-
-.footer-col ul li a {
+footer a {
+  color: white;
   text-decoration: none;
-  color: #555;
-  font-size: 14px;
 }
 
-.footer-col ul li a:hover {
-  text-decoration: underline;
+footer a:hover {
+  color: #90ee90;
 }
 
 .social a {
