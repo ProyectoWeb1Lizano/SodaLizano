@@ -72,14 +72,14 @@ document.getElementById("formTrabaja").addEventListener("submit", function(e){
         return;
     }
 
-    // experiencia 
+    
     if(experiencia.value.trim() === ""){
         experiencia.classList.add("error");
         experiencia.focus();
         return;
     }
 
-    // archivo CV obligatorio
+
     if(cv.files.length === 0){
         cv.classList.add("error");
         alert("Debe adjuntar su currículum");
@@ -88,7 +88,6 @@ document.getElementById("formTrabaja").addEventListener("submit", function(e){
 
     let archivo = cv.files[0];
 
-    // tipo archivo
     let tiposValidos = [
         "application/pdf",
         "application/msword",
